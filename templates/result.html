@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta   charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image search engine </title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styleResult.css')}}">
+   
+</head>
+<body>
+<h1>Results</h1>
+<div class="container-all">
+  {% for key, value in data.items() %}
+      <div class="container">
+        <img src="{{key}}" alt="data" style = "width:28rem;height:14rem">
+        <span class="title">Score</span>
+        <span class="text">{{value}}</span>
+      </div>
+{% endfor %}
+
+</div>
+
+</body>
+
+</html>                                                                                             
